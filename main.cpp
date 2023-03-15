@@ -5,37 +5,54 @@ using namespace std;
 
 int main()
 {
-    int bin,dec=0,rem=0,i=0,bin2;
-    cout<<"Please enter the binary number: ";
-    cin>>bin;
-    bin2=bin;
-        while(bin!=0)
+    double nr,dec=0,rem=0,i=0;
+    double b=0,r=0,j=1;
+    cout<<" Please enter a number: ";
+    cin>>nr;
+    int nr2 = nr;
+    int num = nr;
+    int num2 = nr;
+    int f = nr;
+        while(f>=10)
+        {
+            f/=10;
+        }
+        while(num!=0)
     {
         if(rem!=0 and rem!=1)
         {
             dec=0;
             break;
         }
-        rem=bin%10;
-        bin=bin/10;
+        rem=num%10;
+        num=num/10;
         dec = dec + rem * pow(2,i);
         i++;
 
     }
-    if(dec==0 and bin2!=0)
+    while(num2>0)
     {
-        cout<<"error";
+        r=num2%2;
+        num2=num2/2;
+        b= b + r * j;
+        j= j*10;
+
     }
-    else if(bin2%10==bin2 and bin2>1)
+    if(dec==0 and nr2!=0)
     {
-        cout<<"error";
+        cout<<" The binary number is: "<<b<<endl;
+        cout<<" The number you entered should be expressed in the base 2 numeral system or binary numeral system to be correctly inter- preted as a decimal number \t";
+    }
+    else if(nr2%10==nr2 and nr2>1 or f>1)
+    {
+        cout<<" The binary number is: "<<b<<endl;
+        cout<<" The number you entered should be expressed in the base 2 numeral system or binary numeral system to be correctly inter- preted as a decimal number \t";
     }
     else
     {
-        cout<<"The decimal number is: "<<dec;
+        cout<<" The decimal number is: "<<dec<<endl;
+        cout<<" The binary number is: "<<b;
 
     }
-
-
 
 }
